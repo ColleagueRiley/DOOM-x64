@@ -77,7 +77,10 @@ OBJS=				\
 		$(O)/info.o				\
 		$(O)/sounds.o
 
-all:	 $(O)/linuxxdoom
+all: $(O)	 $(O)/linuxxdoom
+
+$(O):
+	mkdir -p $(O)
 
 clean:
 	rm -f *.o *~ *.flc
